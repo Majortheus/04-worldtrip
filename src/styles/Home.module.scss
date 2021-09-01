@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  header {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+    padding: 27px 0;
+  }
+}
+
+.heroBanner{
+  display: flex;
+  flex-direction: column;
+  height: 370px;
+  background: url('/Banner.png') no-repeat;
+
+  padding: 80px 140px;
+
+  h1{
+    max-width: 500px;
+  }
+
+  p {
+    max-width: 500px;
+    color: var(--text-light);
+  }
+}

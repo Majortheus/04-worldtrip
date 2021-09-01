@@ -1,0 +1,47 @@
+:root {
+  --background: #1D1D1D;
+  --body: ##F5F8FA;
+  
+  --highlight: #FFBA08;
+  --highlight50: #FFBA0880;
+
+  --white: #FFFFFF;
+  --text-light: #F5F8FA;
+  --info-light: #DADADA;
+
+  --black: #000000;
+  --text-dark: #47585B;
+  --info-dark: #999999;
+  --info-dark50: #99999980;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-light);
+}
+
+body,
+input,
+button,
+a {
+  font: 18px "Poppins", sans-serif;
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
