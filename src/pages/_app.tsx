@@ -1,9 +1,10 @@
 import type { AppProps } from 'next/app'
 import { ChakraProvider, extendTheme  } from "@chakra-ui/react"
+import '../styles/globals.scss';
 
 const colors = {
   brand: {
-    900: "#FFBA0880",
+    600: "#FFBA0880",
     500: "#FFBA08",
   },
 }

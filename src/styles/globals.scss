@@ -1,0 +1,19 @@
+:root {
+  --slider-background: #999999;
+  --slider-active: #FFBA08;
+}
+
+.swiper-pagination-bullet{
+  width: 16px !important;
+  height: 16px !important;
+
+  background-color: var(--slider-background) !important;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: var(--slider-active) !important;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  color: var(--slider-active) !important;
+}
