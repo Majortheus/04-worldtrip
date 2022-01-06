@@ -1,6 +1,7 @@
 import React from 'react'
-import { Box, Flex, Heading, Stack, Text, Image as ChakraImage, Divider, Center, Button } from '@chakra-ui/react'
+import { Box, Flex, Heading, Stack, Text, Image as ChakraImage, Divider, Center } from '@chakra-ui/react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 // Import Swiper React components
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
@@ -13,7 +14,7 @@ import 'swiper/css/pagination';
 
 export default function Home() {
   return (
-    <Flex flex={1} direction="column" w="100%" margin="0 auto" maxW={1120}>
+    <Flex flex={1} direction="column" w="100%" margin="0 auto" maxW={1120} paddingBottom={10}>
       <Flex as="header" flex={1} align="center" justify="center" p="27px 0px">
         <Image src="/Logo.svg" width="187" height="46" alt="worldtrip" />
       </Flex>
@@ -74,43 +75,70 @@ export default function Home() {
       </Flex>
 
       <Center marginY={20}>
-        <Divider w="90px" borderColor="gray.600"/>
+        <Divider w="90px" borderColor="gray.600" />
       </Center>
 
-      <Center>    
+      <Center>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           slidesPerView={1}
           navigation
-          pagination={{ clickable: true, type: 'bullets'  }}
+          pagination={{ clickable: true, type: 'bullets' }}
         >
           <SwiperSlide>
-            <Flex color="white" flex={1} direction="column" align="center" justify="center" h={406} backgroundImage="url(/slider/Europe.png)" backgroundSize="cover" backgroundPosition="center">
-              <Heading as="h2" fontSize="xxx-large" fontWeight="semibold">
-                Europa
-              </Heading>
-              <Text fontSize="xl" marginTop={5} fontWeight="semibold">
-                O continente mais antigo.
-              </Text>
-            </Flex>
+            <Link href="/Europe" passHref>
+              <Flex cursor="pointer" color="white" flex={1} direction="column" align="center" justify="center" h={406} backgroundImage="url(/slider/Europe.png)" backgroundSize="cover" backgroundPosition="center">
+                <Heading as="h2" fontSize="xxx-large" fontWeight="semibold">
+                  Europa
+                </Heading>
+                <Text fontSize="xl" marginTop={5} fontWeight="semibold">
+                  O continente mais antigo.
+                </Text>
+              </Flex>
+            </Link>
           </SwiperSlide>
           <SwiperSlide>
             <Flex color="white" flex={1} direction="column" align="center" justify="center" h={406} backgroundImage="url(/slider/America.jpg)" backgroundSize="cover">
               <Heading as="h2" fontSize="xxx-large" fontWeight="semibold">
-                Europa
+                America
               </Heading>
               <Text fontSize="xl" marginTop={5} fontWeight="semibold">
-                O continente mais antigo.
+                O mundo moderno.
               </Text>
             </Flex>
           </SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
+          <SwiperSlide>
+            <Flex color="white" flex={1} direction="column" align="center" justify="center" h={406} backgroundImage="url(/slider/Africa.jpg)" backgroundSize="cover">
+              <Heading as="h2" fontSize="xxx-large" fontWeight="semibold">
+                Africa
+              </Heading>
+              <Text fontSize="xl" marginTop={5} fontWeight="semibold">
+                Experencie a Natureza.
+              </Text>
+            </Flex>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Flex color="white" flex={1} direction="column" align="center" justify="center" h={406} backgroundImage="url(/slider/Asia.jpg)" backgroundSize="cover">
+              <Heading as="h2" fontSize="xxx-large" fontWeight="semibold">
+                Asia
+              </Heading>
+              <Text fontSize="xl" marginTop={5} fontWeight="semibold">
+                O outro lado do mundo.
+              </Text>
+            </Flex>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Flex color="white" flex={1} direction="column" align="center" justify="center" h={406} backgroundImage="url(/slider/Oceania.jpg)" backgroundSize="cover">
+              <Heading as="h2" fontSize="xxx-large" fontWeight="semibold">
+                Oceania
+              </Heading>
+              <Text fontSize="xl" marginTop={5} fontWeight="semibold">
+                Não sei.
+              </Text>
+            </Flex>
+          </SwiperSlide>
         </Swiper>
       </Center>
-      <div>
-
-      </div>
     </Flex>
   )
 }
